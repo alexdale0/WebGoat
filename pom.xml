@@ -6,18 +6,19 @@
     <artifactId>WebGoat</artifactId>
     <packaging>war</packaging>
     <version>6.0.1</version>
-	<!-- If version contains -SNAPSHOT, Nexus will not allow artifact to be staged -->
-	
-	<!-- comment -->
+    <!-- If version contains -SNAPSHOT, Nexus will not allow artifact to be staged -->
 
-	<!--Distribution management controls the Nexus repo location -->
-	<distributionManagement>
-		<snapshotRepository>
-			<id>nexus</id>
-			<url>http://localhost:8081/content/repositories/snapshots</url>
-		</snapshotRepository>
-	</distributionManagement>
-	
+    <!-- comment -->
+    <!-- comment -->
+
+    <!--Distribution management controls the Nexus repo location -->
+    <distributionManagement>
+        <snapshotRepository>
+            <id>nexus</id>
+            <url>http://localhost:8081/content/repositories/snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
+
 
     <repositories>
         <repository>
@@ -46,24 +47,24 @@
             </resource>
         </resources>
         <plugins>
-        	<plugin>
-        		<!-- Override Maven deploy plugin with Nexus deploy plugin -->
-				<groupId>org.sonatype.plugins</groupId>
-				<artifactId>nexus-staging-maven-plugin</artifactId>
-				<version>1.6.5</version> <!-- Ensure you have an up to date version of the plugin -->
-				<extensions>true</extensions>
-				<configuration>
-					<serverId>nexus</serverId>
-					<nexusUrl>http://localhost:8081/</nexusUrl>
-					<!-- explicit matching using the staging profile id -->
-					<!-- <stagingProfileId>7b22736313b68</stagingProfileId> -->
-					<keepStagingRepositoryOnFailure>true</keepStagingRepositoryOnFailure>
-					<keepStagingRepositoryOnCloseRuleFailure>true</keepStagingRepositoryOnCloseRuleFailure>
-					<!-- Uncomment AutoRelease for auto promotion to specified repo (Toll Gate Method) -->
-					<!-- <autoReleaseAfterClose>true</autoReleaseAfterClose> --> 
+            <plugin>
+                <!-- Override Maven deploy plugin with Nexus deploy plugin -->
+                <groupId>org.sonatype.plugins</groupId>
+                <artifactId>nexus-staging-maven-plugin</artifactId>
+                <version>1.6.5</version> <!-- Ensure you have an up to date version of the plugin -->
+                <extensions>true</extensions>
+                <configuration>
+                    <serverId>nexus</serverId>
+                    <nexusUrl>http://localhost:8081/</nexusUrl>
+                    <!-- explicit matching using the staging profile id -->
+                    <!-- <stagingProfileId>7b22736313b68</stagingProfileId> -->
+                    <keepStagingRepositoryOnFailure>true</keepStagingRepositoryOnFailure>
+                    <keepStagingRepositoryOnCloseRuleFailure>true</keepStagingRepositoryOnCloseRuleFailure>
+                    <!-- Uncomment AutoRelease for auto promotion to specified repo (Toll Gate Method) -->
+                    <!-- <autoReleaseAfterClose>true</autoReleaseAfterClose> -->
 
-				</configuration>
-			</plugin>
+                </configuration>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -107,7 +108,7 @@
                         </configuration>
                     </execution>
                 </executions>
-            </plugin>            
+            </plugin>
         </plugins>
     </build>
 
@@ -146,12 +147,12 @@
             <groupId>commons-fileupload</groupId>
             <artifactId>commons-fileupload</artifactId>
             <version>1.2.1</version>
-	</dependency>-->
+    </dependency>-->
         <!--<dependency>
             <groupId>commons-io</groupId>
             <artifactId>commons-io</artifactId>
             <version>1.4</version>
-	</dependency>-->
+    </dependency>-->
         <dependency>
             <groupId>commons-collections</groupId>
             <artifactId>commons-collections</artifactId>
@@ -202,8 +203,8 @@
             <groupId>log4j</groupId>
             <artifactId>log4j</artifactId>
             <version>1.2.17</version>
-	</dependency>-->
-        
+    </dependency>-->
+
         <dependency>
             <groupId>wsdl4j</groupId>
             <artifactId>wsdl4j</artifactId>
@@ -252,7 +253,7 @@
             <artifactId>spring-core</artifactId>
             <version>${org.springframework.version}</version>
         </dependency>
-        
+
         <!-- Jackson -->
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
